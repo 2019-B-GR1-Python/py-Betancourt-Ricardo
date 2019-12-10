@@ -113,19 +113,19 @@ class Sistemas_Operativos:
         self.eliminar_SO(num)
         if so_Aux != None:
             control = input("Actualizar el id del SO ("+so_Aux['id']+"): ")
-            if control != None:
+            if control != "":
                 self.Sistema_Operativo['id'] = control
             else:
                 self.Sistema_Operativo['id'] = so_Aux['id']
 
             control = input("Actualizar el Nombre del SO ("+so_Aux['Nombre']+"): ")
-            if control != None:
+            if control != "":
                 self.Sistema_Operativo['Nombre'] = control
             else:
                 self.Sistema_Operativo['Nombre'] = so_Aux['Nombre']
 
             control = input("Actualizar la Version del SO ("+so_Aux['Version']+"): ")
-            if control != None:
+            if control != "":
                 self.Sistema_Operativo['Version'] = control
             else:
                 self.Sistema_Operativo['Version'] = so_Aux['Version']
@@ -141,6 +141,7 @@ class Sistemas_Operativos:
     
 
 class app:
+
     Lista_app=[]
     App = {}
     APP_TABLE = 'C:/Users/Asus/Documents/GitHub/py-Betancourt-Ricardo/Deber/APP.csv'
